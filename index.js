@@ -1,3 +1,7 @@
+function stubs
+features
+pseudocode functions
+
 function render() {
     if (store.view === 'start') {
       $('.intro').show();
