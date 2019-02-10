@@ -1,3 +1,6 @@
+
+  
+
 body {
     background: url(https://images.pexels.com/photos/1166657/pexels-photo-1166657.jpeg) top right no-repeat;
     background-attachment: fixed;
@@ -8,7 +11,8 @@ body {
 .view {
     margin: auto;
     margin-top: 30px;
-    width: 33%;
+    width: 40%;
+    max-width: 100%;
     padding: 15px;
     text-align: center;
     background: rgba(204, 204, 204, 0.8);
@@ -30,6 +34,8 @@ body {
       height: 200px;
       border-radius: 20px;
       box-shadow: 5px 5px grey;
+      layout: responsive;
+      max-width: 100%;
   }
 
 
@@ -46,6 +52,7 @@ button {
     border-radius: 5px;
     border-radius: 25px;
     text-transform: uppercase;
+    max-width: 100%;
   }
   
   button:hover {
@@ -69,6 +76,7 @@ h2 {
 
 h1 {
     color: rgb(142, 10, 10);
+    max-width: 100%;
     } 
 
     

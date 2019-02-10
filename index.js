@@ -143,7 +143,7 @@ function renderIncorrectAnswer() {
 
 // Template generators (generates HTML based on data) 
 function generateStartView() {
-  return `<h1>CLASSIC LITERATURE QUIZ</h1>
+  return `<h1>CLASSIC AUTHORS QUIZ</h1>
   <h2>Ready to test your knowledge of classic literature authors?</h2>
  <button class="start-button">Start Quiz</button>`;
 }
