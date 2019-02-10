@@ -122,9 +122,7 @@ function renderQuestion() {
   let secondAnswer = QUESTIONS[STORE.viewIndex].secondAnswer;
   let thirdAnswer = QUESTIONS[STORE.viewIndex].thirdAnswer;
   let fourthAnswer = QUESTIONS[STORE.viewIndex].fourthAnswer;
-  let html = generateQuestion(questionText, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer)
-  let statusHTML = generateStatus();
-  $('.status').html(statusHTML);
+  let html = generateQuestion(questionText, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer);
   $('.view').html(html);
 }
 
@@ -134,11 +132,17 @@ function renderIncorrectAnswer() {
   $('.view').html(html);
 }
 
-/*function renderStatus() {
+function renderStatus() {
   let statusHTML = generateStatus();
-  $('.status').html(statusHTML);
+  if (STORE.viewStatus === "quiz") {
+    $('.status').html(statusHTML);
+  }
+  else {
+    $('.status').empty(statusHTML);
+    console.log("Status emptied");
   };
-} */
+}
+
 
 
 // Template generators (generates HTML based on data) 
@@ -223,7 +227,7 @@ function beginQuiz(){
     renderQuestion();
     STORE.viewStatus = "quiz";
     console.log(STORE);
-    
+    renderStatus();
     
    
   });   
@@ -241,7 +245,7 @@ function handleAnswerSubmitted() {
     else {
       renderIncorrectAnswer();
       }
-    //renderStatus();
+    renderStatus();
   }
     // Retrieve answer identifier of user-checked radio button
     // Perform check: User answer === Answer answer?
@@ -258,7 +262,7 @@ function nextQuestion(){
     console.log('nextQuestion ran');
     STORE.viewIndex++;
     renderQuestion();
-    //renderStatus();
+    renderStatus();
    }
   });
 }
@@ -271,7 +275,9 @@ function restartQuiz(){
     STORE.viewIndex = 0;
     STORE.viewStatus = "start";
     STORE.score = 0;
+    console.log(STORE.viewStatus);
     renderStart();
+    renderStatus();
   });
 }
 
