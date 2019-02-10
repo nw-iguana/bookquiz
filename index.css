@@ -72,11 +72,12 @@ button {
 
 h2 {
     color: rgb(43, 56, 87);
+    font-size: 3vw;
     } 
 
 h1 {
     color: rgb(142, 10, 10);
-    max-width: 100%;
+    font-size: 3.5vw;
     } 
 
     
