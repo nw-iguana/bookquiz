@@ -86,5 +86,13 @@ p {
     font-weight: bold;
     } 
 
-
-
+/* accessibility-related */
+fieldset legend {
+  position: absolute;
+  left: -5000px;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+  margin-left: 0px;
+}

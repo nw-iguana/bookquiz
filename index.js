@@ -144,8 +144,8 @@ function renderIncorrectAnswer() {
 // Template generators (generates HTML based on data) 
 function generateStartView() {
   return `<h1>CLASSIC AUTHORS QUIZ</h1>
-  <h2>Ready to test your knowledge of classic literature authors?</h2>
- <button class="start-button">Start Quiz</button>`;
+    <h2>Ready to test your knowledge of classic literature authors?</h2>
+    <button class="start-button">Start Quiz</button>`;
 }
 
 
@@ -153,11 +153,14 @@ function generateQuestion(question, firstAnswer, secondAnswer, thirdAnswer, four
   let htmlQuestion = 
   `<h2>${question}</h2>
     <form class="answeroptions">
-    <label for="choice1"><input type="radio" id="choice1" name="answer" value="${firstAnswer}" required>${firstAnswer}</label> <br /><br />
-    <label for="choice2"><input type="radio" id="choice2" name="answer" value="${secondAnswer}" required>${secondAnswer}</label><br /><br />
-    <label for="choice3"><input type="radio" id="choice3" name="answer" value="${thirdAnswer}" required>${thirdAnswer}</label><br /><br />
-    <label for="choice4"><input type="radio" id="choice4" name="answer" value="${fourthAnswer}" required>${fourthAnswer}</label><br /><br />
-     <button type="submit" class="submit-button">Submit</button>
+      <fieldset>
+        <legend>Choose the correct author</legend>
+        <label for="choice1"><input type="radio" id="choice1" name="answer" value="${firstAnswer}" required>${firstAnswer}</label> <br /><br />
+        <label for="choice2"><input type="radio" id="choice2" name="answer" value="${secondAnswer}" required>${secondAnswer}</label><br /><br />
+        <label for="choice3"><input type="radio" id="choice3" name="answer" value="${thirdAnswer}" required>${thirdAnswer}</label><br /><br />
+        <label for="choice4"><input type="radio" id="choice4" name="answer" value="${fourthAnswer}" required>${fourthAnswer}</label><br /><br />
+      </fieldset>
+    <button type="submit" class="submit-button">Submit</button>
     </form>`;
   return htmlQuestion;
 }
