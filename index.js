@@ -141,7 +141,7 @@ function renderIncorrectAnswer() {
 } */
 
 
-// Template generators (generates HTML based on data) FELIX
+// Template generators (generates HTML based on data) 
 function generateStartView() {
   return `<h1>CLASSIC LITERATURE QUIZ</h1>
   <h2>Ready to test your knowledge of classic literature authors?</h2>
@@ -151,12 +151,12 @@ function generateStartView() {
 
 function generateQuestion(question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer) {
   let htmlQuestion = 
-  `<p>${question}</p>
+  `<h2>${question}</h2>
     <form class="answeroptions">
     <label for="choice1"><input type="radio" id="choice1" name="answer" value="${firstAnswer}" required>${firstAnswer}</label> <br /><br />
     <label for="choice2"><input type="radio" id="choice2" name="answer" value="${secondAnswer}" required>${secondAnswer}</label><br /><br />
     <label for="choice3"><input type="radio" id="choice3" name="answer" value="${thirdAnswer}" required>${thirdAnswer}</label><br /><br />
-    <label for="choice4"><input type="radio" id="choice4" name="answer" value="${fourthAnswer}" required>${fourthAnswer}</label><br /><br /><br />
+    <label for="choice4"><input type="radio" id="choice4" name="answer" value="${fourthAnswer}" required>${fourthAnswer}</label><br /><br />
      <button type="submit" class="submit-button">Submit</button>
     </form>`;
   return htmlQuestion;
@@ -165,7 +165,7 @@ function generateQuestion(question, firstAnswer, secondAnswer, thirdAnswer, four
 function generateStatus() {
   let htmlStatus = `
   <p>Question ${STORE.viewIndex + 1}/10 </p>
-  <p>Your current score is ${STORE.score}/10</p>`;
+  <p>Current score: ${STORE.score}/10</p>`;
   console.log("Generated Status");
   return htmlStatus;
   
@@ -202,14 +202,14 @@ function renderResults() {
 
 function renderCorrect() {
   let html = `<h2>That is correct!</h2> 
-      <img src="linktoimage" alt="happyface"><br><br>
+      <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80 alt="happy kid with book"><br><br>
       <button type ="next" class="next">Next</button>`;
   $('.view').html(html);
 }
 
 function generateAnswerforIncorrect(correctAnswer) {
-  return `<h2>That is incorrect! The author is ${correctAnswer}</h2>
-      <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" alt="disappointed"><br>
+  return `<h2>That is incorrect!<br><br> The author is ${correctAnswer}</h2>
+      <img src="https://images.unsplash.com/photo-1503542724004-53e16040c0c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"      alt="think before you speak"><br>
       <button type ="next" class="next">Next</button>`;
 }
 

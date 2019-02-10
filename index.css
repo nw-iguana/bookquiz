@@ -7,25 +7,31 @@ body {
 
 .view {
     margin: auto;
-    margin-top: 80px;
+    margin-top: 30px;
     width: 33%;
-    padding: 50px;
+    padding: 15px;
     text-align: center;
     background: rgba(204, 204, 204, 0.8);
     border-radius: 25px;
-    color: #1F85DE;
-  }
+      }
 
   
   .status {
-    text-align: right;
+    text-align: center;
+    align: right;
+    width: 20%;
     background: rgba(204, 204, 204, 0.8);
     border-radius: 25px;
+     
   }
 
-button {
-    border-radius: 25px;
-}
+  img {
+      width: 250px;
+      height: 200px;
+      border-radius: 20px;
+      box-shadow: 5px 5px grey;
+  }
+
 
 button {
     width: 300px;
@@ -36,13 +42,26 @@ button {
     padding: 15px;
     font-size: 20px;
     margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
+    border-radius: 25px;
+    text-transform: uppercase;
   }
   
   button:hover {
     background: rgb(142, 10, 10);
   }
   
+  label {
+      color: rgb(142, 10, 10);
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 25px;
+  }
+
+  label:hover {
+    background-color: white;
+  }
 
 h2 {
     color: rgb(43, 56, 87);
@@ -52,27 +71,12 @@ h1 {
     color: rgb(142, 10, 10);
     } 
 
-p {
-    font-size: 12;
     
-}
+p {
+    color: rgb(43, 56, 87);
+    font-size: 20px;
+    font-weight: bold;
+    } 
 
 
-
-
-.sg-replace-icons input[type=radio] + label:before,
-.sg-replace-icons input[type=radio] + label span.sg-icon-target:before
-{
-/* unselected radio */
-/* content: "\f10c"; - Default icon */
- content: "\2661";
-}
-.sg-replace-icons input[type=radio]:checked + label:before,
-.sg-replace-icons input[type=radio]:checked + label span.sg-icon-target:before
-{
-/* selected radio */
-/* content: "\f192"; - Default icon */
- content: "\2665";
- color: #F06586;
-}
 
