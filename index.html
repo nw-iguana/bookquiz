@@ -5,56 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- title page -->
-<div>
-    <h1>CLASSIC LITERATURE QUIZ</h1>
-     <h2>Ready to test your knowledge of classic literature authors?</h2>
-    <button class ="start">Start Quiz
-            clicking takes user to first page with question #1
-</div>
-
-<div class="container">
     
-      <!-- QUESTION 1 -->
-    <p>Who wrote The Three Musketeers?</p>
-    <form class="answeroptions">
-     <input type="radio" name="answer"checked><label for="choice1">Victor Hugo</label> 
-     <input type="radio" name="answer"><label for="choice2"></label>Alexandre Dumas </label>
-     <input type="radio" name="answer"><label for="choice3"></label>Albert Camus </label>
-     <input type="radio" name="answer"><label for="choice4"></label>Marcel Proust </label>
-     <button type="submit">Submit</button>
-     </form>
-</div>
-<div>
-<p> question 1/10 </p>
-<p>Your current score is 0/10</p>
+<div class="view">   
 </div>
 
-<!-- user will click an answer option -->
-    <!-- if answer correct display -->
-    <h2>That is correct!</h2> 
-    <img src="linktoimage" alt="happyface">
-    <button type ="next">Next</button>
+<div class="status">
+</div>
 
-    <!-- if answer incorect display -->
-    <h2>That is incorrect! The author is CORRECTAUTHOR</h2> 
-    <img src="linktoimage" alt="sadface">
-    <button type ="next">Next</button>
-
-    
-<!-- FINAL SCORE PAGE -->
-    <h2> Your score is 7/10</h2>
-    <!-- score evaluation will congratulate user with message equivalent to their score
-    score 8-10: you could write a book yourself
-    score 5-7: nice try, keep reading
-    score 0-4: do you even have a library card? -->
-    <button type="reset">Try again</button>
-
-<!--  -->
-
-
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
