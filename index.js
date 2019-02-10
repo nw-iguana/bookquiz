@@ -153,10 +153,10 @@ function generateQuestion(question, firstAnswer, secondAnswer, thirdAnswer, four
   let htmlQuestion = 
   `<p>${question}</p>
     <form class="answeroptions">
-     <input type="radio" name="answer"checked value="${firstAnswer}" required><label for="choice1">${firstAnswer}</label> 
-     <input type="radio" name="answer" value="${secondAnswer}" required><label for="choice2"></label>${secondAnswer}</label>
-     <input type="radio" name="answer" value="${thirdAnswer}" required><label for="choice3"></label>${thirdAnswer}</label>
-     <input type="radio" name="answer" value="${fourthAnswer}" required><label for="choice4"></label>${fourthAnswer}</label>
+    <label for="choice1"><input type="radio" id="choice1" name="answer" value="${firstAnswer}" required>${firstAnswer}</label> <br /><br />
+    <label for="choice2"><input type="radio" id="choice2" name="answer" value="${secondAnswer}" required>${secondAnswer}</label><br /><br />
+    <label for="choice3"><input type="radio" id="choice3" name="answer" value="${thirdAnswer}" required>${thirdAnswer}</label><br /><br />
+    <label for="choice4"><input type="radio" id="choice4" name="answer" value="${fourthAnswer}" required>${fourthAnswer}</label><br /><br /><br />
      <button type="submit" class="submit-button">Submit</button>
     </form>`;
   return htmlQuestion;
@@ -202,14 +202,14 @@ function renderResults() {
 
 function renderCorrect() {
   let html = `<h2>That is correct!</h2> 
-      <img src="linktoimage" alt="happyface">
+      <img src="linktoimage" alt="happyface"><br><br>
       <button type ="next" class="next">Next</button>`;
   $('.view').html(html);
 }
 
 function generateAnswerforIncorrect(correctAnswer) {
   return `<h2>That is incorrect! The author is ${correctAnswer}</h2>
-      <img src="linktoimage" alt="sadface">
+      <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" alt="disappointed"><br>
       <button type ="next" class="next">Next</button>`;
 }
 

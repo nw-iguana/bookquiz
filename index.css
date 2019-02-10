@@ -1,0 +1,78 @@
+body {
+    background: url(https://images.pexels.com/photos/1166657/pexels-photo-1166657.jpeg) top right no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif
+  }
+
+.view {
+    margin: auto;
+    margin-top: 80px;
+    width: 33%;
+    padding: 50px;
+    text-align: center;
+    background: rgba(204, 204, 204, 0.8);
+    border-radius: 25px;
+    color: #1F85DE;
+  }
+
+  
+  .status {
+    text-align: right;
+    background: rgba(204, 204, 204, 0.8);
+    border-radius: 25px;
+  }
+
+button {
+    border-radius: 25px;
+}
+
+button {
+    width: 300px;
+    height: 55px;
+    color: white;
+    border: 2px;
+    background: #DE781F;
+    padding: 15px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background: rgb(142, 10, 10);
+  }
+  
+
+h2 {
+    color: rgb(43, 56, 87);
+    } 
+
+h1 {
+    color: rgb(142, 10, 10);
+    } 
+
+p {
+    font-size: 12;
+    
+}
+
+
+
+
+.sg-replace-icons input[type=radio] + label:before,
+.sg-replace-icons input[type=radio] + label span.sg-icon-target:before
+{
+/* unselected radio */
+/* content: "\f10c"; - Default icon */
+ content: "\2661";
+}
+.sg-replace-icons input[type=radio]:checked + label:before,
+.sg-replace-icons input[type=radio]:checked + label span.sg-icon-target:before
+{
+/* selected radio */
+/* content: "\f192"; - Default icon */
+ content: "\2665";
+ color: #F06586;
+}
+
